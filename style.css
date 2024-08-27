@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins ;
+}
+@font-face {
+    font-family: Poppins;
+    src: url('./Fonts/Poppins-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Lato;
+    src: url('./Fonts/Poppins-Medium.ttf');
+}
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+  }
+
+  .attribution a {
+    color: #3e52a3;
+  }
+  
+body{
+    background: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    background:#ffff ;
+    width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    border-bottom-right-radius: 120px;
+   
+}
+.container .form{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.container .form .input-box{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container .form .input-box label{
+   font-family: lato; 
+   font-size: 13px;
+}
+.container .form .input-box input{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #d6d6d6;
+}
+.container .form .input-box input::placeholder{
+    padding-left:10px ;
+}
+.container .form .input-box input:focus{
+    border: 2px solid  #3e52a3;
+}
+.container .form .input-box >span{
+    font-size: 8px;
+    font-weight: 100;
+    color: red;
+    display: none;
+}
+.container .form .input-btn button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: 60px;
+    background: #3e52a3;
+    border: none;
+    cursor: pointer;
+}
+.container .form .input-btn button:hover{
+    opacity: 0.5;
+}
+.container .form .input-btn button>img{
+    width: 30px;
+}
+.container .box-res{
+    padding: 30px;
+} 

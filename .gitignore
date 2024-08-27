@@ -1,0 +1,88 @@
+Seu desafio é criar este aplicativo de calculadora de idade e fazer com que ele fique o mais próximo possível do design.
+
+Você pode usar qualquer ferramenta que quiser para ajudar a completar o desafio. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
+
+Visualize uma idade em anos, meses e dias após enviar uma data válida por meio do formulário
+Receba erros de validação se:
+Qualquer campo está vazio quando o formulário é enviado
+O número do dia não está entre 1 e 31
+O número do mês não está entre 1 e 12
+A data está no futuro
+A data é inválida, por exemplo, 31/04/1991 (há 30 dias em abril)
+Veja o layout ideal para a interface dependendo do tamanho da tela do seu dispositivo
+Veja os estados de foco e foco para todos os elementos interativos na página
+Bônus : veja os números de idade animados para o número final quando o formulário for enviado
+Baixe o projeto e percorra o README.mdarquivo. Isso fornecerá mais detalhes sobre o projeto e ajudará você a se preparar.
+
+Quer algum apoio no desafio?
+Junte-se à nossa comunidade
+e faça perguntas no canal de ajuda.
+
+Ideias para testar a si mesmo
+Escreva seus estilos usando um pré-processador, como
+Atrevimento
+,
+Menos
+ou
+Caneta
+Treine seu olhar para os detalhes, aproximando sua solução o máximo possível do design
+Tente estimar o tempo que levará para você construir o projeto. Então veja se o tempo gasto
+ corresponde à sua estimativa. Estimativas de projeto são uma habilidade que é 
+ frequentemente negligenciada, mas é essencial para desenvolvedores profissionais
+
+
+
+
+/*Calcular os dias de vida é uma tarefa relativamente simples, mas requer algumas informações básicas.
+Primeiro, é necessário saber a data de nascimento da pessoa.
+Uma vez que a data de nascimento estiver disponível, é possível calcular os dias de vida rapidamente.
+Para isso, basta subtrair a data de nascimento da data atual.
+Essa subtração resultará no número de dias desde o nascimento.
+Por exemplo, se a data de nascimento for 01/01/2000, e a data atual for 20/03/2020, a subtração resultará em 7.596 dias de vida.  
+
+O cálculo é simples. Basta descobrir quantos anos você tem, multiplicar por 365 e então contar os dias
+desde o seu aniversário até o dia atual. Isso nos ajuda a ter uma noção de quantos dias ainda temos para viver.
+Ao calcular quantos dias de vida eu tenho, ajuda-me a me lembrar de valorizar cada momento e não desperdiçar nada.
+
+Como Calcular os Dias de Vida de uma Pessoa?
+Calcular os dias de vida de uma pessoa pode ser feito manualmente ou usando uma calculadora específica, como a da calculadora24.com. Para calcular manualmente, siga os passos abaixo:
+
+Determine a Data de Nascimento: Anote a data de nascimento da pessoa.
+Calcule o Intervalo de Tempo: Subtraia a data de nascimento da data atual.
+ Isso pode ser feito usando um calendário ou ferramentas online de cálculo de datas.
+Converta para Dias: Converta o intervalo de anos e meses para dias, lembrando que cada ano
+ tem aproximadamente 365 dias (366 em anos bissextos) e cada mês varia entre 28 a 31 dias.
+No entanto, para evitar erros e obter um cálculo preciso, é recomendado usar a calculadora
+ de idade da calculadora24.com, que faz todo esse processo automaticamente.
+
+*/
+
+
+
+const CalcularAno = (AnoTotal, headiline1) => {
+   
+   const AnoDeNascimento = YEAR.value;
+
+   headiline1 = document.querySelector('#year');
+   const CapturarAnoActual = AnoActual.getFullYear();
+   AnoTotal = CapturarAnoActual - AnoDeNascimento;
+   headiline1.innerHTML = AnoTotal;
+
+CalcularMes()
+}
+const CalcularMes = (MesTotal, ConverterAnoEmMes) => {
+   const MesDeNascimento = MONTH.value;
+   ConverterAnoEmMes = (AnoActual.getFullYear() - AnoDeNascimento) * 12;
+   MesTotal = (AnoActual.getMonth() - MesDeNascimento) + ConverterAnoEmMes;
+   const headiline2 = document.querySelector('#month');
+   headiline2.innerHTML = MesTotal;
+   
+
+CalcularDia()
+}
+const CalcularDia = (DiasTotal, headline3) => {
+   const AnoDeVida = (AnoActual.getFullYear() - AnoDeNascimento);
+   DiasTotal = (AnoDeVida * 365) + DAY.value;
+   headline3 = document.querySelector('#day');
+   headline3.innerHTML = DiasTotal;
+}
